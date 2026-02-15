@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id" class="dark no-transition">
+<head>
+<script>
+(function(){
+var s=localStorage.getItem('dardcor_sidebar_state');
+var h=document.documentElement;
+if(s==='closed'){h.classList.add('sidebar-closed');}
+else{h.classList.remove('sidebar-closed');}
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#050508">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<title>Dardcor AI</title>
+<link rel="icon" href="/logo.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/rust.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/ruby.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/swift.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/lua.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/objectivec.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/graphql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/scss.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/nginx.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/vbnet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/perl.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/scala.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/diff.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.js"></script>
+<script>mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'strict' });</script>
+<style>
+:root { --bg-dark: #050508;
+--bg-sidebar: #0a0a12; --primary: #581c87; --math-color: #e2e8f0; --accent: #a855f7; --surface: #1c1c2e; }
+html, body { height: 100%; width: 100vw; margin: 0;
+padding: 0; overflow: hidden; background-color: var(--bg-dark); color: #e2e8f0; font-family: 'Inter', sans-serif; position: fixed; inset: 0; overscroll-behavior: none; -webkit-tap-highlight-color: transparent;
+text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.no-transition * { transition: none !important;
+}
+@keyframes orbit-1 { 0% { transform: rotate3d(1, 1, 1, 0deg); } 100% { transform: rotate3d(1, 1, 1, 360deg);
+} }
+@keyframes orbit-2 { 0% { transform: rotate3d(1, -1, 1, 0deg); } 100% { transform: rotate3d(1, -1, 1, 360deg);
+} }
+@keyframes orbit-3 { 0% { transform: rotate3d(-1, 1, 1, 0deg); } 100% { transform: rotate3d(-1, 1, 1, 360deg);
+} }
+@keyframes orbit-4 { 0% { transform: rotate3d(1, 1, -1, 0deg); } 100% { transform: rotate3d(1, 1, -1, 360deg);
+} }
+@keyframes orbit-5 { 0% { transform: rotate3d(0, 1, 1, 0deg); } 100% { transform: rotate3d(0, 1, 1, 360deg);
+} }
+@keyframes orbit-6 { 0% { transform: rotate3d(1, 0, 0, 0deg); } 100% { transform: rotate3d(1, 0, 0, 360deg);
+} }
+@keyframes star-twinkle { 0%, 100% { opacity: 0.3; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1.2);
+} }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg);
+} }
+@keyframes popupIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1;
+} }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1;
+} }
+.animate-orbit-1 { animation: orbit-1 6s linear infinite; }
+.animate-orbit-2 { animation: orbit-2 7s linear infinite;
+}
+.animate-orbit-3 { animation: orbit-3 8s linear infinite; }
+.animate-orbit-4 { animation: orbit-4 9s linear infinite;
+}
+.animate-orbit-5 { animation: orbit-5 10s linear infinite; }
+.animate-orbit-6 { animation: orbit-6 11s linear infinite;
+}
+.animate-star { animation: star-twinkle 3s ease-in-out infinite; }
+.fade-in-element { animation: fadeIn 0.3s ease-out forwards; }
+.star { position: absolute; background: white;
+border-radius: 50%; }
+.markdown-body { font-size: 0.95rem; line-height: 1.8; width: 100%; max-width: 100%; min-width: 0; overflow-x: hidden; overflow-wrap: break-word; word-break: break-word;
+box-sizing: border-box; color: #e2e8f0; padding-bottom: 2px; }
+.markdown-body > * { max-width: 100%; box-sizing: border-box; }
+.markdown-body p { margin-bottom: 1em;
+}
+.markdown-body > *:last-child { margin-bottom: 0 !important; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 { font-weight: 700; color: #fff;
+margin-top: 1.5em; margin-bottom: 0.75em; border-bottom: none !important; line-height: 1.3; }
+.markdown-body hr { display: none !important; border: none !important;
+}
+.markdown-body a { color: #a855f7 !important; text-decoration: underline; text-underline-offset: 2px; }
+.markdown-body a:hover { color: #e9d5ff !important;
+}
+.markdown-body ul { list-style: disc !important; padding-left: 2.5em; margin-bottom: 1em; }
+.markdown-body ul li { position: relative; margin-bottom: 0.5em; padding-left: 0.3em;
+}
+.markdown-body ol { list-style-type: decimal !important; padding-left: 2.5em; margin-bottom: 1em; }
+.markdown-body ol li { margin-bottom: 0.5em; padding-left: 0.3em;
+}
+.markdown-body table { 
+    display: table; 
+    width: 100%; 
+    border-collapse: collapse !important; 
+    border-spacing: 0; 
+    border: 1px solid #3b0764 !important; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    min-width: max-content;
+    margin: 0;
+}
+.markdown-body th, .markdown-body td { 
+    padding: 12px 16px;
+    border: 1px solid #4c1d95 !important; 
+    color: #e2e8f0; 
+    font-size: 0.9rem;
+    background-color: rgba(255,255,255,0.02); 
+    text-align: left; 
+    vertical-align: top;
+    white-space: normal;
+}
+.markdown-body th { 
+    background-color: rgba(88, 28, 135, 0.4) !important; 
+    color: #fff; 
+    font-weight: 700;
+    border-bottom: 2px solid #581c87 !important; 
+}
+.table-wrapper { 
+    display: block; 
+    width: 100%; 
+    overflow-x: auto; 
+    margin: 1.5em 0; 
+    border-radius: 8px; 
+    border: 1px solid #3b0764;
+    scrollbar-width: thin;
+    scrollbar-color: #581c87 #050508;
+    background: #050508;
+}
+.table-wrapper::-webkit-scrollbar {
+    height: 2px;
+}
+.table-wrapper::-webkit-scrollbar-track {
+    background: #050508;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #581c87;
+    border-radius: 0;
+}
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #7e22ce;
+}
+.table-wrapper table { margin: 0 !important; border: none !important; }
+.terminal-wrapper-outer { position: relative; width: 100%;
+overflow: hidden; margin: 12px 0;
+border-radius: 8px; z-index: 10; display: block; border: 1px solid #581c87; background: #000;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+isolation: isolate; contain: content; }
+.terminal-container { display: flex; flex-direction: column; width: 100%;
+background: #000 !important; position: relative; z-index: 11;
+}
+.terminal-head { height: 30px; padding: 0 8px; display: flex; align-items: center; justify-content: space-between;
+background: #0f0f16; border-bottom: 1px solid #333;
+flex-shrink: 0; user-select: none; }
+.terminal-scroll-area { overflow-x: auto; background: #000 !important; padding: 0 !important;
+margin: 0 !important; width: 100%;
+display: block; position: relative; }
+.terminal-scroll-area pre { margin: 0 !important; padding: 0 !important;
+font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+font-size: 13px; line-height: 1.6; color: #e4e4e7; width: fit-content; min-width: 100%; tab-size: 4; -moz-tab-size: 4;
+white-space: pre; word-spacing: normal; word-break: normal;
+word-wrap: normal; }
+.terminal-scroll-area code { background: transparent !important; padding: 0 !important; white-space: pre;
+font-family: inherit; display: block; color: inherit;
+border: none; font-weight: normal; margin: 0 !important; }
+.terminal-scroll-area::-webkit-scrollbar { height: 4px !important;
+width: 4px !important; background: #000 !important;
+}
+.terminal-scroll-area::-webkit-scrollbar-track { background: #000 !important; }
+.terminal-scroll-area::-webkit-scrollbar-thumb { background: #581c87 !important; border-radius: 2px !important;
+}
+.terminal-scroll-area::-webkit-scrollbar-thumb:hover { background: #7e22ce !important;
+}
+.cmd-btn { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 4px; font-size: 10px;
+font-weight: 600; cursor: pointer;
+border: none; outline: none; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+.btn-preview { background-color: #3b0764 !important;
+color: #e9d5ff !important;
+border: 1px solid #581c87 !important; box-shadow: 0 0 10px rgba(59, 7, 100, 0.5);
+}
+.btn-preview:hover { background-color: #581c87 !important;
+color: white !important; box-shadow: 0 0 15px rgba(88, 28, 135, 0.7);
+}
+.btn-diagram { background-color: #3b0764 !important; color: #e9d5ff !important;
+border: 1px solid #581c87 !important;
+box-shadow: 0 0 10px rgba(59, 7, 100, 0.5); }
+.btn-diagram:hover { background-color: #581c87 !important;
+color: white !important;
+box-shadow: 0 0 15px rgba(88, 28, 135, 0.7); }
+.btn-copy { background-color: #18181b; color: #a1a1aa;
+border: 1px solid #27272a;
+}
+.btn-copy:hover { background-color: #27272a; color: #fff; }
+.hljs { color: #e4e4e7 !important; background: transparent !important;
+padding: 0 !important;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in, .hljs-name, .hljs-tag { color: #c084fc !important; font-weight: bold;
+}
+.hljs-string, .hljs-title, .hljs-section, .hljs-attribute, .hljs-literal, .hljs-template-tag, .hljs-template-variable, .hljs-type, .hljs-addition { color: #4ade80 !important;
+}
+.hljs-comment, .hljs-quote, .hljs-deletion, .hljs-meta { color: #60a5fa !important; font-style: italic; }
+.hljs-number, .hljs-regexp, .hljs-symbol, .hljs-bullet, .hljs-link { color: #fbbf24 !important;
+}
+.hljs-function, .hljs-title.function_ { color: #60a5fa !important; }
+.hljs-variable, .hljs-template-variable { color: #fbbf24 !important; }
+.loader { width: 18px; height: 18px;
+border: 2px solid rgba(88, 28, 135, 0.3); border-top-color: #581c87; border-radius: 50%; animation: spin 0.8s linear infinite; }
+.modal { position: fixed;
+inset: 0; background: rgba(0,0,0,0.95); z-index: 10000; display: none; align-items: center; justify-content: center; }
+.modal.active { display: flex; }
+.bot-identity { display: flex;
+align-items: center; gap: 10px; margin-bottom: 12px; margin-top: 4px; }
+.bot-identity-logo { width: 20px; height: 20px; border-radius: 50%; object-fit: cover;
+}
+.bot-identity-name { font-size: 0.9rem; font-weight: 700; color: #e9d5ff; letter-spacing: 0.03em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5em 0;
+margin: 1em 0; background: transparent !important; }
+.katex * { font-family: KaTeX_Main, 'Times New Roman', serif !important; border-color: currentColor;
+}
+.katex { font-size: 1.1em; font-family: KaTeX_Main, 'Times New Roman', serif !important; text-rendering: auto; color: var(--math-color); line-height: 1.2;
+}
+.katex-html { overflow-x: visible !important; overflow-y: hidden; }
+.katex .base { margin-top: 2px; margin-bottom: 2px;
+}
+@media (min-width: 1024px) { 
+  html.sidebar-closed #sidebar { transform: translateX(-100%) !important;
+} 
+  html.sidebar-closed #main-content { left: 0 !important; width: 100% !important;
+} 
+  html:not(.sidebar-closed) #sidebar { transform: translateX(0) !important; }
+  html:not(.sidebar-closed) #main-content { left: 18rem !important;
+width: calc(100% - 18rem) !important; }
+}
+#sidebar, #main-content { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#chat-container { overscroll-behavior-y: contain; overflow-anchor: auto !important; flex: 1; min-height: 0; padding-bottom: 20px; scroll-behavior: auto !important; transform: translateZ(0); will-change: scroll-position;
+}
+#message-list .chat-content-box { background-color: transparent !important; background-image: none !important; }
+#message-list .justify-end .chat-content-box { border: 1px solid rgba(88, 28, 135, 0.8) !important;
+box-shadow: 0 0 20px rgba(88, 28, 135, 0.15) !important; color: white !important; border-bottom-right-radius: 0.125rem !important; background-color: transparent !important;
+}
+#message-list .justify-start .chat-content-box { border: none !important; box-shadow: none !important; color: #e5e7eb !important; background-color: transparent !important; padding-left: 0 !important;
+padding-top: 0 !important; border-radius: 0 !important; width: 100%; }
+#message-list .justify-start .message-bubble-container .chat-content-box > div.whitespace-pre-wrap, #message-list .justify-start .message-bubble-container .chat-content-box .markdown-body { padding-left: 0 !important;
+padding-top: 4px; }
+.message-bubble-container .relative.rounded-xl.overflow-hidden.border { border: none !important; background: transparent !important; box-shadow: none !important; }
+.message-bubble-container img { border-radius: 8px !important;
+display: block; max-width: 100%; height: auto; }
+#message-list button.bg- { background-color: transparent !important; border: none !important; box-shadow: none !important;
+padding: 0 !important; margin: 0 !important; font-size: 11px !important; color: #6b7280 !important; opacity: 0.8; }
+#message-list button:hover { color: white !important;
+opacity: 1; }
+#message-list .flex.items-center.gap-2.mt-2.px-1 { column-gap: 1.25rem !important; margin-top: 0.5rem !important; padding-left: 0.5rem !important; }
+.safe-pb { padding-bottom: env(safe-area-inset-bottom);
+}
+body.vscode-active #chat-wrapper { width: 50% !important; flex: 0 0 50%; border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.vscode-active #editor-wrapper { width: 50% !important; flex: 0 0 50%; opacity: 1; pointer-events: auto; }
+#chat-wrapper { width: 100%;
+flex: 0 0 100%; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; display: flex; flex-direction: column; overflow: hidden;
+height: 100%; }
+#editor-wrapper { width: 0; flex: 0 0 0; opacity: 0; pointer-events: none;
+transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s; background: #1e1e1e; display: flex; flex-direction: column; overflow: hidden;
+}
+details.unified-header { width: fit-content; margin-bottom: 6px; display: block; border: none !important; background: transparent !important; outline: none !important; box-shadow: none !important;
+}
+details.unified-header > summary { list-style: none; display: flex; align-items: center; width: fit-content; outline: none !important; cursor: pointer; border: none !important;
+background: transparent !important; padding: 0; margin: 0; }
+details.unified-header > summary::-webkit-details-marker { display: none; }
+.header-content-wrapper { display: flex; align-items: center;
+gap: 10px; padding: 4px 0; opacity: 0.95; transition: opacity 0.2s; user-select: none; white-space: nowrap; background: transparent !important; border: none !important;
+box-shadow: none !important; }
+.header-content-wrapper:hover { opacity: 1; }
+.header-content-wrapper.static-mode { cursor: default; }
+.logo-stack { position: relative; width: 20px; height: 20px;
+display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.main-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; position: relative;
+z-index: 2; box-shadow: 0 0 10px rgba(168, 85, 247, 0.4); }
+.spinner-ring { position: absolute; inset: -3px; border: 2px solid transparent;
+border-top-color: #a855f7; border-right-color: #a855f7; border-radius: 50%; animation: spin 1s linear infinite; z-index: 1; opacity: 0; transition: opacity 0.3s;
+}
+.spinner-ring.active { opacity: 1; }
+.bot-name-display { font-size: 13px; font-weight: 700; color: #e9d5ff; letter-spacing: 0.5px;
+text-shadow: 0 0 10px rgba(168, 85, 247, 0.3); }
+header button.p-2.rounded-lg { background: transparent !important; box-shadow: none !important; border: none !important;
+}
+header button.p-2.rounded-lg:hover { background: rgba(255,255,255,0.05) !important; }
+.editor-header { height: 35px; background: #0a0a12; display: flex; align-items: center; padding: 0 10px;
+border-bottom: 1px solid #1e1e1e; flex-shrink: 0; width: 100%; }
+.editor-tab { background: #050508; color: #fff; padding: 5px 15px; font-size: 12px;
+border-top: 1px solid #a855f7; display: flex; align-items: center; gap: 8px; cursor: pointer; height: 100%; border-right: 1px solid #1e1e1e;
+}
+.editor-body { flex: 1; display: flex; overflow: hidden; height: calc(100% - 35px); width: 100%; }
+.editor-sidebar { width: 200px; background: #0a0a12;
+border-right: 1px solid #1e1e1e; display: flex; flex-direction: column; }
+.editor-files { flex: 1; overflow-y: auto; padding: 5px; color: #ccc; font-size: 12px;
+}
+.file-item { padding: 4px 8px; cursor: pointer; display: flex; align-items: center; gap: 6px; border-radius: 3px; user-select: none;
+}
+.file-item:hover { background: #1e1e1e; }
+.file-item.active { background: #2d2d2d; color: #fff; }
+.folder-item { padding: 4px 8px; font-weight: bold; color: #a855f7;
+display: flex; align-items: center; gap: 6px; margin-top: 5px; cursor: context-menu; user-select: none; }
+.editor-actions { padding: 8px; border-top: 1px solid #1e1e1e;
+display: flex; gap: 5px; }
+.action-btn { flex: 1; background: #1e1e1e; border: 1px solid #333; color: #ccc; font-size: 10px; padding: 4px;
+border-radius: 3px; cursor: pointer; text-align: center; }
+.action-btn:hover { background: #333; color: white; }
+.editor-content-wrapper { flex: 1; position: relative; overflow: hidden;
+background: #050508; }
+#monaco-container { width: 100%; height: 100%; }
+.editor-ctrl-btn { color: #ccccc7; cursor: pointer; padding: 5px 8px; border-radius: 4px;
+display: flex; align-items: center; gap: 5px; font-size: 12px; }
+.editor-ctrl-btn:hover { background: #333; color: white; }
+.btn-run { color: #4ade80 !important;
+font-weight: bold; margin-right: 10px; }
+.btn-run:hover { background: #064e3b !important; }
+.editor-popup-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 99999;
+display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px); }
+.editor-popup { background: #1e1e1e; border: 1px solid #333; border-radius: 8px; width: 300px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.5); overflow: hidden; animation: popupIn 0.2s ease-out; }
+.editor-popup-header { background: #252526; padding: 10px 15px; font-size: 13px;
+font-weight: bold; color: #ccc; border-bottom: 1px solid #333; }
+.editor-popup-body { padding: 15px; }
+.editor-popup-input { width: 100%; background: #0a0a12;
+border: 1px solid #333; color: #fff; padding: 8px; font-size: 13px; border-radius: 4px; outline: none; }
+.editor-popup-input:focus { border-color: #a855f7;
+}
+.editor-popup-footer { padding: 10px 15px; background: #252526; display: flex; justify-content: flex-end; gap: 8px; border-top: 1px solid #333;
+}
+.editor-popup-btn { padding: 6px 12px; font-size: 12px; border-radius: 4px; cursor: pointer; border: none; font-weight: 500; }
+.btn-cancel { background: transparent;
+color: #ccc; }
+.btn-cancel:hover { background: #333; }
+.btn-confirm { background: #581c87; color: white; }
+.btn-confirm:hover { background: #6b21a8; }
+.context-menu { position: fixed;
+background: #252526; border: 1px solid #454545; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 50000; padding: 4px 0; min-width: 150px;
+}
+.context-menu-item { padding: 6px 12px; font-size: 12px; color: #cccccc; cursor: pointer; display: flex; align-items: center; gap: 8px;
+}
+.context-menu-item:hover { background: #094771; color: white; }
+.context-menu-item i { width: 14px; text-align: center; }
+.context-menu-separator { height: 1px; background: #454545;
+margin: 4px 0; }
+@media (max-width: 768px) { .editor-sidebar { width: 0; display: none; } .editor-sidebar.active { width: 150px; display: flex;
+position: absolute; z-index: 10; height: 100%; } }
+.btn-open-in-editor-placeholder { display: none !important; width: 100%; height: 80px; padding: 0; background: #0f0f16;
+border: 1px dashed #581c87; color: #a855f7; text-align: center; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; transition: all 0.2s; border-radius: 8px;
+flex-direction: column; align-items: center; justify-content: center; gap: 8px; margin: 0; box-sizing: border-box; }
+.btn-open-in-editor-placeholder:hover { background: #1a1a24; color: #fff; border-color: #d8b4fe;
+box-shadow: 0 0 15px rgba(168, 85, 247, 0.2); }
+body.vscode-active .terminal-scroll-area, body.vscode-active .terminal-head { display: none !important;
+}
+body.vscode-active .btn-open-in-editor-placeholder { display: flex !important; }
+</style>
+</head>
+<body class="flex bg-[#050508] h-full overflow-hidden fixed inset-0">
+<div id="mobile-overlay" class="fixed inset-0 bg-black/80 z-[9998] hidden lg:hidden backdrop-blur-sm transition-opacity" onclick="window.toggleSidebar()"></div>
+
+<div id="diagram-overlay" class="fixed inset-0 z-[10000] hidden bg-[#050508]">
+<button onclick="window.closePreview()" class="absolute top-2 right-2 z-[10001] text-gray-400 hover:text-white bg-black/50 hover:bg-black/80 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur-sm transition-all border border-white/10 shadow-lg">
+<i class="fas fa-times text-sm"></i>
+</button>
+<iframe id="diagram-frame" class="w-full h-full border-none bg-white"></iframe>
+</div>
+
+<aside id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-[#0a0a12] border-r border-white/10 flex flex-col z-[9999] transform -translate-x-full lg:translate-x-0 h-full shadow-2xl safe-pl transition-none">
+<div class="h-16 shrink-0 flex items-center px-4 border-b border-white/10 bg-[#0a0a12] relative">
+<span class="font-bold text-lg text-purple-400 flex items-center gap-3">
+<img src="/logo.png" class="w-7 h-7 rounded-full shadow-lg" alt="Logo"> 
+Dardcor <span class="text-white">AI</span>
+</span>
+<button onclick="window.toggleSidebar()" 
+class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors p-2">
+<i class="fas fa-times text-lg"></i>
+</button>
+</div>
+
+<div class="flex-1 overflow-y-auto p-2 scrollbar-hide">
+<% 
+let isNewChatActive = true;
+if (conversationList && conversationList.length > 0 && activeConversationId) {
+const exists = conversationList.some(c => c.id === activeConversationId);
+if (exists) isNewChatActive = false;
+} 
+%>
+<div id="current-new-chat-item" onclick="window.createNewChat()" class="static-new-chat-item group relative flex items-center px-3 py-2.5 rounded-lg cursor-pointer w-full transition-all border border-purple-900 <%= isNewChatActive ? 'bg-[#202336] text-white' : 'bg-white/5 hover:bg-white/10 text-gray-400' %>">
+<div class="flex-1 min-w-0 flex items-center">
+<i class="fas fa-plus mr-3 text-sm"></i>
+<span class="text-xs font-bold uppercase tracking-wider">New Chat</span>
+</div>
+</div>
+
+<div class="text-[9px] text-gray-500 font-bold uppercase tracking-widest px-3 mb-2 mt-4 text-center">Riwayat</div>
+<div class="space-y-[1px] px-1">
+<% if (conversationList) { conversationList.forEach(chat => { %>
+<div id="chat-item-<%= chat.id %>" onclick="window.loadChat('<%= chat.id %>')" class="chat-item group relative flex items-center px-3 py-2.5 rounded-lg cursor-pointer w-full transition-all <%= chat.id === activeConversationId ? 'bg-[#202336] text-white border-l-2 border-purple-900' : 'text-gray-400 border-l-2 border-transparent hover:bg-white/5' %>">
+<div class="flex-1 min-w-0 flex items-center">
+<span id="title-<%= 
+chat.id %>" class="text-xs truncate"><%= chat.title ? chat.title.substring(0, 25) : 'Percakapan' %></span>
+<input type="hidden" id="raw-title-<%= chat.id %>" value="<%= chat.title ? chat.title.replace(/"/g, '&quot;').replace(/'/g, '&#39;') : '' %>">
+</div>
+<button onclick="event.stopPropagation();
+window.toggleMenu(event, 'menu-<%= chat.id %>')" class="options-btn absolute right-2 z-20 w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white transition-opacity bg-transparent outline-none focus:outline-none <%= chat.id === activeConversationId ?
+'opacity-100' : 'opacity-0 group-hover:opacity-100' %>">
+<i class="fas fa-ellipsis-v text-[10px]"></i>
+</button>
+
+<div id="menu-<%= chat.id %>" class="hidden absolute right-2 top-8 w-32 bg-[#2a2d3d] border border-gray-600 rounded-lg shadow-xl z-30 py-1" onclick="event.stopPropagation()">
+<button onclick="window.openRenameModal('<%= chat.id %>')" class="w-full text-left px-3 py-2 text-xs hover:bg-white/10 text-gray-300 flex gap-2 items-center">
+<i class="fas fa-edit"></i> Edit
+</button>
+
+<button onclick="window.openDeleteModal('<%= chat.id %>')" class="w-full text-left px-3 py-2 text-xs text-red-400 hover:bg-white/10 flex gap-2 items-center">
+<i class="fas fa-trash"></i> Hapus
+</button>
+</div>
+</div>
+<% }) } %>
+</div>
+</div>
+
+<div class="p-4 border-t border-white/10 bg-[#08080c] flex justify-between items-center">
+<a href="/dardcorchat/profile" class="flex items-center gap-3">
+<img src="<%= user.profile_image ||
+('https://ui-avatars.com/api/?name=' + encodeURIComponent(user.username || 'User')) %>" class="w-8 h-8 rounded-full bg-gray-700 object-cover" alt="Profile">
+<div class="text-xs font-bold text-white truncate w-24"><%= user.username %></div>
+</a>
+<a href="/dardcor-logout" class="text-gray-500 hover:text-red-400">
+<i class="fas fa-power-off"></i>
+</a>
+</div>
+</aside>
+
+<main id="main-content" class="absolute inset-0 right-0 h-full bg-[#050508] lg:left-72 w-full lg:w-[calc(100%-18rem)] flex overflow-hidden">
+<div id="chat-wrapper">
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+<div class="star w-0.5 h-0.5 top-10 left-20 animate-star" style="animation-delay: 0s;"></div>
+<div class="star w-1 h-1 top-1/4 right-1/4 animate-star" style="animation-delay: 1s;"></div>
+<div class="star w-0.5 h-0.5 bottom-1/3 left-1/3 animate-star" style="animation-delay: 2s;"></div>
+<div class="star w-1 h-1 top-20 right-10 animate-star" style="animation-delay: 1.5s;"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-900/10 rounded-full blur-[80px] md:blur-[100px] pointer-events-none"></div>
+</div>
+
+<header class="h-16 shrink-0 flex items-center justify-between px-4 border-b border-purple-900/20 bg-[#050508]/80 backdrop-blur-md z-30 relative">
+<div class="flex 
+items-center">
+<button onclick="window.toggleSidebar()" class="text-gray-400 hover:text-white transition-colors mr-3 flex items-center justify-center w-10 h-10 lg:hidden z-50">
+<i class="fas fa-bars text-xl"></i>
+</button>
+<button onclick="window.toggleSidebar()" class="text-gray-400 hover:text-white transition-colors mr-3 hidden lg:flex items-center justify-center">
+<i class="fas fa-bars text-lg"></i>
+</button>
+</div>
+<div id="navbar-alert" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1.5 bg-[#1c1c2e] border border-purple-900/30 rounded-full shadow-lg flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none transform scale-90 z-[10000]">
+<i id="navbar-alert-icon" class="fas fa-info-circle text-purple-400 text-xs"></i>
+<span id="navbar-alert-text" class="text-xs font-bold text-gray-200 whitespace-nowrap">Notification</span>
+</div>
+
+<div class="flex items-center gap-2 ml-auto">
+<button id="refresh-chat-btn" class="w-9 h-9 flex items-center justify-center rounded-lg border border-purple-900 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+<i id="refresh-icon" class="fas fa-sync-alt text-xs"></i>
+</button>
+</div>
+</header>
+
+<div id="chat-container" class="flex-1 w-full overflow-y-auto overflow-x-hidden scrollbar-hide relative px-4 pt-6 z-10">
+<div id="message-list" class="w-full max-w-3xl mx-auto flex flex-col gap-6 
+pt-4 pb-4">
+<%- include(contentPage) %>
+</div>
+</div>
+
+<div class="flex-none w-full bg-[#050508] z-30" style="padding-bottom: env(safe-area-inset-bottom);">
+<%- include('input') %>
+</div>
+</div>
+
+<div id="editor-wrapper">
+<div class="h-10 bg-[#252526] border-b border-[#3e3e42] flex items-center px-4 justify-between shrink-0">
+<div class="flex items-center gap-3">
+<i class="fas fa-code text-[#007acc] text-sm"></i>
+<span class="text-xs text-[#cccccc] font-medium">VS Code Editor</span>
+</div>
+<button onclick="document.body.classList.remove('vscode-active')" class="text-[#cccccc] hover:text-white w-6 h-6 flex items-center justify-center rounded hover:bg-[#444] transition-colors">
+<i class="fas fa-times text-xs"></i>
+</button>
+</div>
+<div id="monaco-editor-root" class="flex-1 w-full h-full bg-[#1e1e1e] relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center text-[#555] flex-col gap-2">
+<i class="fas fa-code text-4xl mb-2 opacity-50"></i>
+<span class="text-sm font-mono">Initializing Editor...</span>
+</div>
+</div>
+</div>
+</main>
+
+<div id="delete-modal" class="modal">
+<div class="bg-[#1c1c2e] p-6 rounded-xl border border-white/10 text-center w-80 shadow-2xl">
+<h3 class="font-bold text-white mb-2">Hapus?</h3>
+<div class="flex gap-3">
+<button onclick="window.closeModal('delete-modal')" class="flex-1 py-2.5 bg-white/5 rounded text-xs text-gray-300">Batal</button>
+<button onclick="window.submitDelete()" class="flex-1 py-2.5 bg-red-600 rounded text-xs text-white">Hapus</button>
+</div>
+</div>
+</div>
+
+<div 
+id="rename-modal" class="modal">
+<div class="bg-[#1c1c2e] p-6 rounded-xl border border-white/10 text-center w-80 shadow-2xl">
+<h3 class="font-bold text-white mb-4">Ubah Nama</h3>
+<input id="rename-input" class="w-full bg-black/50 border border-white/10 p-2.5 rounded text-white mb-4 text-xs">
+<div class="flex gap-3">
+<button onclick="window.closeModal('rename-modal')" class="flex-1 py-2.5 bg-white/5 rounded text-xs">Batal</button>
+<button onclick="window.submitRename()" class="flex-1 py-2.5 bg-purple-900 rounded text-xs text-white">Simpan</button>
+</div>
+</div>
+</div>
+
+<script src="/js/notfound1.js?v=<%= Date.now() %>" defer></script>
+<script src="/js/notfound2.js?v=<%= Date.now() %>" defer></script>
+<script src="/js/notfound3.js?v=<%= Date.now() %>" defer></script>
+<script src="/js/notfound4.js?v=<%= Date.now() %>" defer></script>
+<script src="/js/notfound5.js?v=<%= Date.now() %>" defer></script>
+</body>
+</html>
